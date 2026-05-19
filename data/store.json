@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": "admin-1",
+      "name": "Store Admin",
+      "email": "admin@store.com",
+      "role": "Admin",
+      "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9"
+    },
+    {
+      "id": "user-1",
+      "name": "Demo User",
+      "email": "user@store.com",
+      "role": "User",
+      "passwordHash": "e606e38b0d8c19b24cf0ee3808183162ea7cd63ff7912dbb22b5e803286b4446"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "Wireless Headphones",
+      "category": "Audio",
+      "description": "Comfortable over-ear headphones with clear sound and long battery life.",
+      "price": 79.99,
+      "stock": 18,
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "prod-2",
+      "name": "Smart Watch",
+      "category": "Wearables",
+      "description": "Track workouts, notifications, and daily goals from your wrist.",
+      "price": 129.99,
+      "stock": 12,
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "prod-3",
+      "name": "Travel Backpack",
+      "category": "Bags",
+      "description": "Durable daily backpack with laptop storage and quick-access pockets.",
+      "price": 59.5,
+      "stock": 24,
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80"
+    }
+  ],
+  "orders": []
+}

@@ -1,0 +1,17 @@
+{
+  "name": "e-commerce-web-application",
+  "version": "1.0.0",
+  "description": "Basic full-stack e-commerce store with product management, cart checkout, role-based access, and order tracking.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.15.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

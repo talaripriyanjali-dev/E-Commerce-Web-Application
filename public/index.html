@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Store</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Full-stack demo store</p>
+        <h1>Commerce Desk</h1>
+      </div>
+      <nav class="nav">
+        <button class="tab active" data-view="shop">Shop</button>
+        <button class="tab" data-view="orders">Orders</button>
+        <button class="tab admin-only hidden" data-view="admin">Admin</button>
+      </nav>
+      <div class="account">
+        <span id="userBadge">Guest</span>
+        <button id="loginToggle" class="ghost">Login</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="content">
+        <section id="shopView" class="view">
+          <div class="section-head">
+            <div>
+              <h2>Product Catalog</h2>
+              <p>Browse products, add items to cart, and checkout as a customer.</p>
+            </div>
+            <input id="searchInput" type="search" placeholder="Search products" />
+          </div>
+          <div id="productGrid" class="product-grid"></div>
+        </section>
+
+        <section id="ordersView" class="view hidden">
+          <div class="section-head">
+            <div>
+              <h2>Order Tracking</h2>
+              <p>Users see their own orders. Admins can monitor every order.</p>
+            </div>
+            <button id="refreshOrders" class="ghost">Refresh</button>
+          </div>
+          <div id="ordersList" class="stack"></div>
+        </section>
+
+        <section id="adminView" class="view hidden">
+          <div class="section-head">
+            <div>
+              <h2>Product Management</h2>
+              <p>Create and update catalog items from the admin dashboard.</p>
+            </div>
+          </div>
+          <form id="productForm" class="admin-form">
+            <input type="hidden" id="productId" />
+            <label>Name<input id="productName" required /></label>
+            <label>Category<input id="productCategory" required /></label>
+            <label>Price<input id="productPrice" type="number" min="0" step="0.01" required /></label>
+            <label>Stock<input id="productStock" type="number" min="0" step="1" required /></label>
+            <label class="wide">Image URL<input id="productImage" /></label>
+            <label class="wide">Description<textarea id="productDescription" rows="3"></textarea></label>
+            <div class="form-actions">
+              <button type="submit">Save Product</button>
+              <button type="button" id="clearProduct" class="ghost">Clear</button>
+            </div>
+          </form>
+          <div id="adminProducts" class="stack"></div>
+        </section>
+      </section>
+
+      <aside class="side-panel">
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Cart</h2>
+            <span id="cartCount">0 items</span>
+          </div>
+          <div id="cartItems" class="stack compact"></div>
+          <div class="total-row">
+            <span>Total</span>
+            <strong id="cartTotal">$0.00</strong>
+          </div>
+          <form id="checkoutForm" class="checkout">
+            <textarea id="address" rows="3" placeholder="Delivery address"></textarea>
+            <button type="submit">Checkout</button>
+          </form>
+        </section>
+
+        <section id="loginPanel" class="panel">
+          <div class="panel-head">
+            <h2>Login</h2>
+            <span>Admin/User</span>
+          </div>
+          <form id="loginForm" class="login-form">
+            <input id="email" type="email" value="user@store.com" placeholder="Email" required />
+            <input id="password" type="password" value="user123" placeholder="Password" required />
+            <button type="submit">Sign In</button>
+            <button type="button" id="useAdmin" class="ghost">Use Admin</button>
+          </form>
+        </section>
+      </aside>
+    </main>
+
+    <div id="toast" class="toast hidden"></div>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
